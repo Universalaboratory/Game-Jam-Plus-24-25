@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 3535446292373577430}
   - component: {fileID: 2508715017668374757}
   - component: {fileID: 2170087414519612860}
+  - component: {fileID: 1894917021127872843}
   m_Layer: 0
   m_Name: Emilia
   m_TagString: Untagged
@@ -121,7 +122,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.3868194, y: -0.0000038146973}
+  m_Offset: {x: -1.1625719, y: 0.09056282}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -132,7 +133,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 25.480476, y: 38.789307}
+  m_Size: {x: 20.098383, y: 38.608173}
   m_EdgeRadius: 0
 --- !u!50 &8578526284091036620
 Rigidbody2D:
@@ -149,7 +150,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 2
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -194,7 +195,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a548919bba00d848b13620dc19ddf4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _jumpForce: 5
   _walkSpeed: 2
+  _groundCheck: {fileID: 0}
+  _groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!114 &2170087414519612860
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -284,8 +290,47 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: dfaef47d-3904-42d9-a9e5-a3acf60fe7c6
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 5b122b57-1100-46d8-b60c-3ec1e0614071
+    m_ActionName: Player/Jump[/Keyboard/space,/XInputControllerWindows/buttonSouth]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!70 &1894917021127872843
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1509298552863101306}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.89693475, y: -0.20192762}
+  m_Size: {x: 16.39475, y: 38.590767}
+  m_Direction: 0
