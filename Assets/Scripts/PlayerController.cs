@@ -63,7 +63,6 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded) 
         {
             rb.velocity = new Vector2(rb.velocity.x,_jumpForce);
-            Debug.Log("Jump");
         }
     }
 

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class CutsceneController : MonoBehaviour
 {
@@ -32,6 +33,10 @@ public class CutsceneController : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Return))
             {
+                if(_currentImageIndex == _images.Length - 1)
+                {
+                    EndCutscene();
+                }
                 _timer = 0f;
                 StopAllCoroutines();
                 StartCoroutine(ChangeImage());
@@ -57,6 +62,10 @@ public class CutsceneController : MonoBehaviour
             _cutsceneImage = newImage;
             _currentImageIndex = nextImageIndex;
         }
+        else
+        {
+            EndCutscene();
+        }
 
         _isTransitioning = false;
     }
@@ -73,11 +82,12 @@ public class CutsceneController : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
+
         image.rectTransform.anchoredPosition = endPos;
     }
 
     void EndCutscene()
     {
-        Debug.Log("Cutscene finished!");
+        SceneManager.LoadScene(1);
     }
 }

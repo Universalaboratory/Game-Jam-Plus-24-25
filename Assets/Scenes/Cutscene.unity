@@ -516,6 +516,14 @@ PrefabInstance:
       propertyPath: _cutsceneImage
       value: 
       objectReference: {fileID: 585604546}
+    - target: {fileID: 7617690115385619098, guid: 4d6e16ca3189e64449ba82141bb6d481, type: 3}
+      propertyPath: _images.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7617690115385619098, guid: 4d6e16ca3189e64449ba82141bb6d481, type: 3}
+      propertyPath: _images.Array.data[9]
+      value: 
+      objectReference: {fileID: 21300000, guid: 4327141d857547b4484a0446ad3dd4ff, type: 3}
     - target: {fileID: 7868132862086506753, guid: 4d6e16ca3189e64449ba82141bb6d481, type: 3}
       propertyPath: m_Name
       value: CutsceneManager

@@ -18,7 +18,9 @@ public class TouchingDirections : MonoBehaviour
 
     RaycastHit2D[] groundHits = new RaycastHit2D[5];
 
-    [SerializeField] private float _groundDistance = 0.5f;
+    [SerializeField] 
+    private float _groundDistance = 0.5f;
+    [SerializeField]
     private bool _isGrounded;
 
 
