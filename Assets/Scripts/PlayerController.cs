@@ -46,7 +46,7 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCapsule(_groundCheck.position,new Vector2(16.4f,38.6f),CapsuleDirection2D.Vertical, 0, _groundLayer);
+        isGrounded = Physics2D.OverlapCapsule(_groundCheck.position,new Vector2(15.1f, 2.0f),CapsuleDirection2D.Horizontal, 0, _groundLayer);
         rb.velocity = new Vector2(moveInput.x * _walkSpeed, rb.velocity.y);
         animator.SetFloat("xSpeed", Mathf.Abs(rb.velocity.x));
 
